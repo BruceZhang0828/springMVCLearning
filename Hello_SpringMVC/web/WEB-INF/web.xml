@@ -30,7 +30,7 @@
         -->
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-
+    <!--注意：如果配置了多个过滤器，那么字符编码过滤器一定要在最前面，否则失效。-->
     <filter>
         <filter-name>characterEncodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>

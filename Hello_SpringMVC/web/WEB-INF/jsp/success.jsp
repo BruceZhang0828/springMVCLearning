@@ -12,7 +12,11 @@
 </head>
 <br>
 操作成功<br>
-request:${requestScope.get("request")}
-session:${sessionScope.get("session")}
+request:${requestScope.get("requestParam")}
+request:${requestScope.get("msg")}
+session:${sessionScope.get("sessionParam")}
+session:${sessionScope.get("msg")}
+${msg}
+${user}
 </body>
 </html>
