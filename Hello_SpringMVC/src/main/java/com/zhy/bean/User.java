@@ -13,6 +13,16 @@ public class User {
     private String name;
     private String password;
     private Integer age;
+    private String gender;
+
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 
     public Integer getId() {
         return id;
@@ -53,6 +63,7 @@ public class User {
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
                 ", age=" + age +
+                ", gender='" + gender + '\'' +
                 '}';
     }
 }

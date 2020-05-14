@@ -62,4 +62,6 @@ public class UserController {
         System.out.println("modelAttribute:"+user);
         o3 = user;
     }
+
+
 }
