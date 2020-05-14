@@ -1,7 +1,11 @@
 package com.zhy.bean;
 
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 /**
@@ -12,13 +16,25 @@ import java.util.Date;
  **/
 public class User {
     private Integer id;
+    @NotNull
+    @Length(min = 5,max = 10)
     private String name;
     private String password;
     private Integer age;
     private String gender;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date birth;
+    @Email
+    private String email;
 
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public Date getBirth() {
         return birth;
@@ -77,6 +93,7 @@ public class User {
                 ", age=" + age +
                 ", gender='" + gender + '\'' +
                 ", birth=" + birth +
+                ", email='" + email + '\'' +
                 '}';
     }
 }
