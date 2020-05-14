@@ -28,6 +28,18 @@ public class User {
     private String email;
 
 
+    public User() {
+    }
+
+    public User(Integer id, String name, Integer age, String gender, Date birth, String email) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.birth = birth;
+        this.email = email;
+    }
+
     public String getEmail() {
         return email;
     }

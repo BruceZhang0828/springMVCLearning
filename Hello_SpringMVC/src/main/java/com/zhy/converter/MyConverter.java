@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
  * @Date: 2020/5/13 22:38
  * @Version: 1.0
  **/
-@Component
 public class MyConverter implements Converter<String, User> {
 
     @Override
