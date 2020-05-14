@@ -1,5 +1,7 @@
 package com.zhy.bean;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 /**
@@ -14,7 +16,17 @@ public class User {
     private String password;
     private Integer age;
     private String gender;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date birth;
 
+
+    public Date getBirth() {
+        return birth;
+    }
+
+    public void setBirth(Date birth) {
+        this.birth = birth;
+    }
 
     public String getGender() {
         return gender;
@@ -64,6 +76,7 @@ public class User {
                 ", password='" + password + '\'' +
                 ", age=" + age +
                 ", gender='" + gender + '\'' +
+                ", birth=" + birth +
                 '}';
     }
 }
